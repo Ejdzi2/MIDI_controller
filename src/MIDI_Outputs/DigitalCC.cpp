@@ -20,6 +20,12 @@ void DigitalCC::invert()  // Invert the button state
 void DigitalCC::refresh() {  // Check if the button state changed, and send a MIDI CC accordingly
   bool state = ExtIO::digitalRead(pin) ^ invertState;  // read the button state and invert it if "invert" is true
 
+   ExtIO::pinMode(20, INPUT_PULLUP);
+ ExtIO::pinMode(2, INPUT_PULLUP);
+  int ss = digitalRead(20); //
+  int ch = digitalRead(2); //channel button
+ 
+  
   if (millis() - prevBounceTime > debounceTime)
   {
     int8_t stateChange = state - buttonState;
@@ -29,15 +35,15 @@ void DigitalCC::refresh() {  // Check if the button state changed, and send a MI
       buttonState = state;
       MIDI_Controller.MIDI()->send(CONTROL_CHANGE, 
         channel + channelOffset * channelsPerBank, 
-        controller + addressOffset * channelsPerBank, 127);
+        controller + addressOffset * channelsPerBank, 0); //instead note off
     }
 
     if (stateChange == rising)
     { // Button is released
       buttonState = state;
-      MIDI_Controller.MIDI()->send(CONTROL_CHANGE, 
-        channel + channelOffset * channelsPerBank,
-        controller + addressOffset * channelsPerBank, 0);
+   //   MIDI_Controller.MIDI()->send(CONTROL_CHANGE, 
+   //    channel + channelOffset * channelsPerBank,
+   //   controller + addressOffset * channelsPerBank, 0);
     }
   }
   if (state != prevState)
