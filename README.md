@@ -4,7 +4,7 @@ This library has been obsoleted by its successor, the [**Control Surface**](http
 
 The MIDI_controller library was sligthtly modified to suit my needs. Particulary MIDI_OUTPUTS src (Digital.cpp and DigitalCC.cpp).
 
-Installation
+# Installation
 Installing the MIDI_controller library
 
 To install this library, download the latest version as a .ZIP file. Then open the Arduino IDE, go to Sketch > Include Library > Add .ZIP library, and open the .ZIP file you just downloaded.
@@ -16,7 +16,7 @@ If you are using an Arduino with native USB support, like the Leonardo, Due, Zer
 
 If you're using a Teensy board, you have to install the Arduino core for Teensy (aka Teensyduino). Download it here, if you haven't already.
 
-Uploading
+# Uploading
 Arduino boards with native USB support
 
 Open controller_foot.ino, connect your Arduino, select the right port from the Tools menu, and hit upload.
