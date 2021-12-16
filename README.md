@@ -17,6 +17,6 @@ If you are using an Arduino with native USB support, like the Leonardo, Due, Zer
 If you're using a Teensy board, you have to install the Arduino core for Teensy (aka Teensyduino). Download it here, if you haven't already.
 
 # Uploading
-Arduino boards with native USB support
+Arduino boards with native USB support (Arduino micropro)
 
 Open controller_foot.ino, connect your Arduino, select the right port from the Tools menu, and hit upload.
