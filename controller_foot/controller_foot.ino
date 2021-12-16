@@ -51,9 +51,9 @@ Digital buttons[] = {
 
 //DigitalCC off(2, MIDI_CC::All_Notes_Off, channel); // pin 2,  mozna ustawic jako all notes off - wyłączony
 
-// A bank that shifts each button one octave (12 semitones)
+// A bank that shifts each button one octave up (12 semitones)
 Bank octave(12); 
-// A bank selector with a momentary push button on pin 0 and an LED on pin 11-no light (original), 1-light (up transposed)
+// A bank selector with a momentary push button on pin 0 and  LED on fake pin 11- no light (original), 1-light (up transposed) -led atached to pin 1  (there is no pin 11 on arduino micro pro board)
 BankSelector bs(octave, {0}, {11, 1, 1, 1, 1});
  void setup() {  // Add the note buttons to the bank, changing the address (note number) - zmiana oktaw
   octave.add(buttons, Bank::CHANGE_ADDRESS);
