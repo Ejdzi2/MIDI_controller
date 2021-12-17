@@ -160,7 +160,7 @@ else
 	  
 	  if (ss == HIGH) // sustain switch on "normal" - noteoff
 	  
-      MIDI_Controller.MIDI()->send(NOTE_OFF, channel + channelOffset * channelsPerBank, note + addressOffset * channelsPerBank, velocity); //noteoff for last played note
+	  MIDI_Controller.MIDI()->send(NOTE_OFF, channel + channelOffset * channelsPerBank + chch, note + addressOffset * channelsPerBank, velocity); //noteoff for last played note
     }
   }
   if (state != prevState)
