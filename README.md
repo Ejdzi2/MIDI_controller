@@ -17,3 +17,4 @@ If you are using an Arduino with native USB support, like the Leonardo, Due, Zer
 Arduino boards with native USB support (Arduino micropro)
 
 Open controller_foot.ino, connect your Arduino, select the right port from the Tools menu, and hit upload.
+![obraz](https://user-images.githubusercontent.com/81420520/146534655-2f38a112-d62d-41f1-814b-bcae3a70d481.png)
